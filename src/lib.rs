@@ -7,10 +7,6 @@ use thirtyfour::{DesiredCapabilities, WebDriver};
 /// Fetches a new ChromeDriver executable and patches it to prevent detection.
 /// Returns a WebDriver instance.
 pub async fn chrome() -> Result<WebDriver, Box<dyn std::error::Error>> {
-<<<<<<< HEAD
-=======
-    let os = std::env::consts::OS;
->>>>>>> 9c2ea1d34ed18eb5b775e1fb421cc6916cf9cf4b
     let postfix = if cfg!(windows) { ".exe" } else { "" };
     let chromedriver_exe_name = format!("chromedriver{postfix}");
     let chromedriver_patched_name = format!("chromedriver_PATCHED{postfix}");
